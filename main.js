@@ -1,15 +1,26 @@
 'use strict';
 
-const mainText = document.querySelector(".slides")
+const aboutText = document.querySelector(".slides__about")
 window.addEventListener('scroll',function(){
     const value = window.scrollY
     console.log("scrollY",value);
     if(value>750){
-        mainText.style.animation = "back__slide 1.5s ease-out forwards"
+        aboutText.style.animation = "back__slide 1.5s ease-out forwards"
     }else{
-        mainText.style.animation = "side__slide 1.5s ease-out"
+        aboutText.style.animation = "side__slide 1.5s ease-out"
     }
 })
+
+const skillText_1 = document.querySelector(".slides__skill")
+window.addEventListener('scroll',function(){
+    const value__1 = window.scrollY
+    if(value__1>1460){
+        skillText_1.style.animation = "back__slide 1.5s ease-out forwards"
+    }else{
+        skillText_1.style.animation = "side__slide 1.5s ease-out"
+    }
+})
+
 
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
