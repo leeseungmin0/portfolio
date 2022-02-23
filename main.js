@@ -1,5 +1,16 @@
 'use strict';
 
+const mainText = document.querySelector(".slides")
+window.addEventListener('scroll',function(){
+    const value = window.scrollY
+    console.log("scrollY",value);
+    if(value>750){
+        mainText.style.animation = "back__slide 1.5s ease-out forwards"
+    }else{
+        mainText.style.animation = "side__slide 1.5s ease-out"
+    }
+})
+
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
