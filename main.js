@@ -1,5 +1,6 @@
 'use strict';
 
+// 각 타이틀 h1태그 keyframes animation
 const aboutText = document.querySelector(".slides__about")
 window.addEventListener('scroll',function(){
     const value = window.scrollY
@@ -14,7 +15,7 @@ window.addEventListener('scroll',function(){
 const skillText_1 = document.querySelector(".slides__skill")
 window.addEventListener('scroll',function(){
     const value__1 = window.scrollY
-    if(value__1>1460){
+    if(value__1>1450){
         skillText_1.style.animation = "back__slide 1.5s ease-out forwards"
     }else{
         skillText_1.style.animation = "side__slide 1.5s ease-out"
@@ -32,6 +33,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
+// 햄버거 메뉴창 활성화 
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
