@@ -1,24 +1,14 @@
 'use strict';
 
 // 각 타이틀 h1태그 keyframes animation
-const aboutText = document.querySelector(".slides__about")
+const aboutText = document.querySelector(".slides")
 window.addEventListener('scroll',function(){
     const value = window.scrollY
     console.log("scrollY",value);
-    if(value>750){
+    if(value>450){
         aboutText.style.animation = "back__slide 1.5s ease-out forwards"
     }else{
         aboutText.style.animation = "side__slide 1.5s ease-out"
-    }
-})
-
-const skillText_1 = document.querySelector(".slides__skill")
-window.addEventListener('scroll',function(){
-    const value__1 = window.scrollY
-    if(value__1>1450){
-        skillText_1.style.animation = "back__slide 1.5s ease-out forwards"
-    }else{
-        skillText_1.style.animation = "side__slide 1.5s ease-out"
     }
 })
 
