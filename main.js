@@ -5,7 +5,7 @@ const aboutText = document.querySelector(".slides")
 window.addEventListener('scroll',function(){
     const value = window.scrollY
     console.log("scrollY",value);
-    if(value>450){
+    if(value>200){
         aboutText.style.animation = "back__slide 1.5s ease-out forwards"
     }else{
         aboutText.style.animation = "side__slide 1.5s ease-out"
