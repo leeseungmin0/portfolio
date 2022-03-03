@@ -1,5 +1,20 @@
 /* Global */
 
+@-webkit-keyframes rainbow {
+    0%{color:#885656;}
+    9%{color:#c2795f;}
+    18%{color:#ccc166;}
+    27%{color:#8cb85a;}
+    36%{color:#5cc75c;}
+    45%{color:#58ba86;}
+    54%{color:#609abf;}
+    63%{color:#5a6cba;}
+    72%{color:#7858b3;}
+    81%{color:#b461ba;}
+    90%{color:#ba5d8c;}
+    100%{color:#b55d7e;}
+}
+
 :root {
     /* Color */
     --color-white: #ffffff;
@@ -123,7 +138,7 @@ p {
 }
 
 #navbar.navbar--dark{
-    background-color: var(--color-grey);
+    background-color: var(--color-grey);opacity: 0.7;
     padding: 8px;
     
 }
@@ -160,10 +175,11 @@ p {
     display: none;
     top: 22px;
 }
+
 /* Home */
 
 #home {
-    height: 600px;
+    height: 700px;
     background: url(imgs/home-img.jpeg) center/cover no-repeat fixed;
     padding: 40px;
     padding-top: 120px;
@@ -171,16 +187,24 @@ p {
     
 }
 
+
 .home__container{
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    padding-top: 50px;
 }
-.home__avatar{
-    width: 55%;
-    height: 50%;    
+.home__avatars{
+    position: absolute;
+    top: -20px;
+    left: 500px;
+    
 }
 
+.home__avatar{
+    padding-top: 50px;
+    width: 25%;
+    height: 25%;    
+}
 
 
 .home__title,
@@ -214,11 +238,15 @@ p {
 }
 
 /* About */
+
+
+
 .about__majors{
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
 }
+
 
 .major__icon{
     width: 170px;
@@ -239,19 +267,14 @@ p {
     color: var(--color-pink);
     transform: rotate(-30deg) scale(1.1);
 }
-.major__title, 
-.major__description{
+.major__title{
     color: var(--color-dark-grey)
-}
-
-.major__description{
-    font-size: var(--font-small);
 }
 
 /* Skill */
 
 #skills{
-    background-color: var(--color-white);
+    background-color: var(--color-yellow);
 }
 
 .skillset{
@@ -438,7 +461,7 @@ p {
 
 /* Contact */
 #contact{
-    background-color: var(--color-blue);
+    background-color: var(--color-grey);
 }
 
 .contact__title,
