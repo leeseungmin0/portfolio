@@ -179,9 +179,9 @@ p {
 /* Home */
 
 #home {
-    height: 700px;
+    height: auto;
     background: url(imgs/home-img.jpeg) center/cover no-repeat fixed;
-    padding: 40px;
+    padding: 30px;
     padding-top: 120px;
     text-align: center;
     
@@ -191,17 +191,13 @@ p {
 .home__container{
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
-}
-.home__avatars{
-    position: absolute;
-    top: -20px;
-    left: 500px;
-    
+    padding-top: 40px; 
+
+
 }
 
+
 .home__avatar{
-    padding-top: 50px;
     width: 25%;
     height: 25%;    
 }
@@ -220,6 +216,7 @@ p {
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+    cursor: pointer;
 }
 
 .home__contact:hover {
@@ -245,7 +242,7 @@ p {
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
-}
+} 
 
 
 .major__icon{
@@ -332,6 +329,7 @@ p {
     margin: 40px;
 }
 .category__btn{
+    margin-bottom: 10px;
     border: 1px solid var(--color-dark-grey);
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
@@ -339,11 +337,11 @@ p {
     position: relative;
 }
 
-.category__btn.selected,
+/* .category__btn.selected,
 .category__btn:hover{
     background-color: var(--color-light-grey);
     color: var(--color-white);
-}
+} */
 
 .category__btn.selected  .category__count, 
 .category__btn:hover .category__count{
@@ -369,6 +367,7 @@ p {
     animation: side__slide 1.5s ease-out;
 }
 .work__projects{
+    padding: 40px atuo;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -386,36 +385,63 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 250px;
+    width: 300px;
+    height: 270px;
     margin: 2px;
     background-color: var(--color-light-white);
 }
 
-.project.invisible{
-    display: none;
-}
-.project__img{
-    max-width: 100%;
-    max-height: 100%;
-}
 
-.project__description{
-    position: absolute;
-    background-color: black;
+
+.project__img, .project a{
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all var(--animation-duration) ease-in;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 20px;
+    transition: .5s;
 }
 
-.project:hover .project__description{
-    transform: translateY(0);
-    opacity: 0.8;
+
+
+.project::before{
+    content: "PHOTO GALLELY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -160px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
 }
+
+.project::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgb(0, 0, 0, .4);
+    transition: .3s;
+}
+
+.project:hover::after{
+    height: 100%;
+    cursor: pointer;
+}
+
+.project:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
 /* Testimonial */
 
 #testimonials{
