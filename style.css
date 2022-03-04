@@ -442,13 +442,13 @@ p {
     opacity: 1;
 }
 
-/* Testimonial */
+/* jobs */
 
-#testimonials{
+#jobs{
     background-color: var(--color-light-white);
 }
 
-.testimonials{
+.jobs{
     margin: 40px;
 }
 
