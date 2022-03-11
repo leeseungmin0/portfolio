@@ -1,20 +1,4 @@
 /* Global */
-
-@-webkit-keyframes rainbow {
-    0%{color:#885656;}
-    9%{color:#c2795f;}
-    18%{color:#ccc166;}
-    27%{color:#8cb85a;}
-    36%{color:#5cc75c;}
-    45%{color:#58ba86;}
-    54%{color:#609abf;}
-    63%{color:#5a6cba;}
-    72%{color:#7858b3;}
-    81%{color:#b461ba;}
-    90%{color:#ba5d8c;}
-    100%{color:#b55d7e;}
-}
-
 :root {
     /* Color */
     --color-white: #ffffff;
@@ -159,7 +143,6 @@ p {
     cursor: pointer;
     border-radius: var(--size-border-radius);
     border: 1px solid transparent;
-    border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
@@ -179,10 +162,14 @@ p {
 /* Home */
 
 #home {
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(imgs/home-img.jpeg) center/cover no-repeat fixed;
-    padding: 30px;
+    width: 100%;
+    padding: 10px;
     padding-top: 120px;
+    height: 700px;
     text-align: center;
     
 }
@@ -190,21 +177,17 @@ p {
 
 .home__container{
     display: flex;
-    justify-content: space-around;
-    padding-top: 40px; 
-
-
 }
 
-
 .home__avatar{
-    width: 25%;
-    height: 25%;    
+    width: 400px;
+    height: 500px;
 }
 
 
 .home__title,
 .home__description{
+    width: 300px;
     color: var(--color-white);
 }
 
@@ -326,27 +309,29 @@ p {
 
 /* Work */
 .work__categories{
-    margin: 40px;
+    margin: 20px;
 }
 .category__btn{
-    margin-bottom: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 8px 48px;
+    box-shadow: 3px 3px 3px black;
     border: 1px solid var(--color-dark-grey);
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
-    padding: 8px 48px;
-    position: relative;
+    
+    
 }
 
-/* .category__btn.selected,
 .category__btn:hover{
     background-color: var(--color-light-grey);
     color: var(--color-white);
-} */
+}
 
-.category__btn.selected  .category__count, 
-.category__btn:hover .category__count{
-    opacity: 1;
-    top: 0;
+.category__btn:active{
+    margin-left: 5px;
+    margin-top: 5px;
+    box-shadow: none;
 }
 .category__count{
     background-color: var(--color-orange);
@@ -364,20 +349,13 @@ p {
 }
 
 .slides{
+    width: 300px;
     animation: side__slide 1.5s ease-out;
 }
 .work__projects{
-    padding: 40px atuo;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    opacity: 1;
-    transition: all var(--animation-duration) ease-out;
-}
-
-.work__projects.anim-out{
-    opacity: 0;
-    transform: scale(0.9) translateY(40px);
+    
 }
 
 .project{
@@ -413,7 +391,7 @@ p {
     font-size: 22px;
     font-weight: bold;
     width: 100%;
-    margin-top: -160px;
+    margin-top: -110px;
     opacity: 0;
     transition: .3s;
     transition-delay: .2s;
@@ -454,6 +432,7 @@ p {
 
 .testimonial {
     display: flex;
+    justify-content: center;
     margin: 32px 0;
 }
 
@@ -515,13 +494,11 @@ p {
 .arrow-up{
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 20px;
     width: 70px;
-    height: 70px;
-    font-size: 50px;
-    color: var(--color-white);
-    background-color: var(--color-blue);
-    border-radius: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: var(--color-dark-grey);
     opacity: 0;
     pointer-events: none;
     transition: opacity 300ms ease-in;
@@ -531,6 +508,20 @@ p {
     opacity: 1;
     pointer-events: auto;
 }
+
+@media screen and (max-width: 1200px) {
+    .home__avatars{
+        width: 300px;
+    }
+    .home__avatar{
+        width: 260px;
+        height: 260px;
+    }
+
+    
+
+}
+
 @media screen and (max-width: 768px){
     :root{
         --font-large: 30px;
@@ -566,7 +557,13 @@ p {
     .navbar__menu.open{
         display: block;
     }
-
+    
+    .home__title{
+        font-size: 48px;
+    }
+    .home__description{
+        font-size: 28px;
+    }
     .section{
         padding: 16px;
         padding-top: 40px;
@@ -575,7 +572,6 @@ p {
         flex-direction: column;
         margin-top: 30px;
         margin-bottom: 0;
-
     }
 
     .major{
@@ -586,12 +582,15 @@ p {
         flex-direction: column;
     }
     .category__btn{
-        width: 100%;
-        margin: 4px 0;
+        max-width: 100%;
+        margin-bottom: 30px;
+        
     }
     .project{
+        max-width: 300px;
         flex-grow: 1;
     }
+    
 
     .testimonial{
         flex-direction: column;

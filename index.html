@@ -34,14 +34,14 @@
     <section id="home"> 
         <div class="home__container">
             <div class="slides">
-                <h1 class="home__title">Hello, <br>i'm SeungMin</h1>
+                <h1 class="home__title">Hello, <br>I'm SeungMin</h1>
                 <h2 class="home__description">No one knows who I am right now, but I'll be an engineer that everyone knows about in the future.</h2>
                 <button class="home__contact">Contact Me</button>    
             </div>
-        
-            <img src="imgs/Sm_portfolio３.png" alt="Sm profile photo" class="home__avatar">
-            <img src="imgs/Sm_portfolio1.png" alt="Sm profile photo" class="home__avatar">
-            <img src="imgs/Sm_portfolio2.png" alt="Sm profile photo" class="home__avatar">
+            <div class="home__avatars">
+                <img src="imgs/Sm_portfolio３.png" alt="Sm profile photo" class="home__avatar">
+                <img src="imgs/Sm_portfolio1.png" alt="Sm profile photo" class="home__avatar">
+            </div>
         </div>
     </section>
     <!-- About -->
@@ -49,7 +49,9 @@
         <div class="about__container">
             <h1>About Me</h1>
             <p>
-                I am currently living in Japan and started studying because I was interested in programming and design. Even if the works look immature, they are growing faster than anyone else.
+                現在日本に住んでいる韓国人です。プログラミングに興味を持ち、<br>
+                2ヶ月間プログラミングのスクールに通い、現在独学でプログラミングを勉強中です。
+                
             </p>
         </div>
         <div class="about__majors">
@@ -88,9 +90,8 @@
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
             <p>
-                2ヶ月間プログラミングのスクールに通い、現在独学でプログラミングを勉強しております。
                 以下のスキルを使う事ができます。VScodeに書いたSourceCodeをGithubに保存する事か可能です。
-                日本で３年6ヶ月働いた経験がありますので、コミュニケーションは問題ないです。
+                日本で3年6ヶ月働いた経験がありますので、コミュニケーションは問題ありません。
             </p>
             <div class="skillset">
                 <div class="skillset__left">
@@ -155,7 +156,6 @@
                         <ul class="etc__list">
                             <li><span>Git</span></li>
                             <li><span>Japanese</span></li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -168,24 +168,15 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn selected" data-filter="*">All</button>
-                    <!-- <button class="category__btn" data-filter="front-end">
-                        Front-end <span class="category__count">3</span>
-                    </button>
-                    <button class="category__btn" data-filter="back-end">
-                        Back-end <span class="category__count">3</span>
-                    </button>
-                    <button class="category__btn" data-filter="mobile">
-                        Mobile <span class="category__count">3</span>
-                    </button>
-                </div>-->
+                <button class="category__btn" >All</button>
                 <div class="work__projects"> 
-                    <a href="https://leeseungmin0.github.io/portfolio2/" class="project" target="blank" data-type="front-end">
+                    <a href="https://leeseungmin0.github.io/portfolio2/" class="project" target="blank" data-type="all">
                         <img class="project__img" src="imgs/SM_Projects__photo.png" alt="">
                         <div class="project__description"></div>
                     </a>
                 </div>
             </div>
+        </div>    
     </section>
     <!-- Testimonials -->
     <section id="jobs" class="section">
@@ -195,14 +186,14 @@
                 <div class="testimonial">
                     <img src="imgs/jop/jop__cj.png" alt="" class="testimonial__avatar">
                     <div class="testimonial__speech-bubble">
-                        <p>韓国の企業CJ Hellovisiで２年</p>
+                        <p>韓国の企業CJ Hellovisiで2年間働きました。担当した仕事はSetbox,WIFIルーター、携帯電話,テレビ設置し必要なケーブルの在庫管理、お客さんの電話対応を担当しました。</p>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <img src="imgs/jop/jop__daikoku.png" alt="" class="testimonial__avatar">
                     <div class="testimonial__speech-bubble">
-                        <p>日本の企業株式会社ダイコクドラック免税店で３年6ヶ月働きました。担当した仕事の内容は、責任者としてバイト生の教育、採用の面接、商品の返品や発注、観光客のお客様が多かったので通訳のことを担当しました。お客さまが多い時には店が混雑する時が多かったので一般レジのお客様、免税レジのお客様をしっかり把握しながらクレームがないように誘導</p>
+                        <p>日本の企業株式会社ダイコクドラック免税店で3年6ヶ月働きました。担当した仕事の内容は、責任者としてバイト生の教育、採用の面接、商品の返品や発注、観光客のお客様が多かったので通訳のことを担当しました。お客さまが多い時には店が混雑する時が多かったので一般レジのお客様、免税レジのお客様をしっかり把握しながらクレームがないように誘導</p>
                     </div>
+                    <img src="imgs/jop/jop__daikoku.png" alt="" class="testimonial__avatar">
                 </div>
 
             </div>
@@ -216,9 +207,6 @@
             <a href="https://github.com/leeseungmin0">
                 <i class="fa-brands fa-github"></i>
             </a>
-            <a href="#" class="_blank">
-                <i class="fa-solid fa-face-grin-wide"></i>
-            </a>
         </div>
         <p class="contact__rights">
             &copy; 2022 Seungmin - All rights reserved
@@ -226,7 +214,7 @@
     </section>
     <!-- Arrow up -->
     <button class="arrow-up">
-        <i class="fa-solid fa-arrow-up"></i>
+        TOP
     </button>
 </body>
 </html>
