@@ -88,22 +88,24 @@ p {
 
 @keyframes side__slide {
     from{
-        margin-left: -400px;
+        right: -400px;
         opacity: 0;
     }
     to{
+        right: 400px;
         opacity: 1;
     }
 }
 
 @keyframes back__slide{
     from{
+        right: 400px;
         opacity: 1;
     }
     
     to{
-        margin-left:-400px;
-        opacity: 0;
+        right: -400px;
+        opacity: 1;
     }
 }
 
@@ -358,66 +360,62 @@ p {
     
 }
 
-.project{
+.projects__container{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 270px;
-    margin: 2px;
-    background-color: var(--color-light-white);
+    margin: 10px;
+    border-radius: 20px;
 }
 
 
 
-.project__img, .project a{
+.project__img{
     width: 100%;
     height: 100%;
+    width: 300px;
+    height: 270px;
     box-shadow: 3px 3px 5px black;
     border-radius: 20px;
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 
+.projects__container:hover .project__img{
+    filter: blur(2px);
+}
 
-
-.project::before{
-    content: "PHOTO GALLELY";
+.project__name{
+    opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    width: 100%;
-    margin-top: -110px;
-    opacity: 0;
-    transition: .3s;
-    transition-delay: .2s;
-    z-index: 1;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+    color: azure;
+    pointer-events: none;
+    z-index: 3;
+    transition: .3s ease-in-out;
 }
 
-.project::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    border-radius: 10px;
-    height: 0;
-    background-color: rgb(0, 0, 0, .4);
-    transition: .3s;
-}
-
-.project:hover::after{
-    height: 100%;
-    cursor: pointer;
-}
-
-.project:hover::before{
-    margin-top: 0;
+.projects__container:hover .project__name{
     opacity: 1;
+    animation:  text__animate .5s linear;
+    width: 100%;
+}
+
+@keyframes text__animate{
+    0%{
+        top:10%
+    }
+    50%{
+        top:35%
+    }
+    100%{
+        top:50%
+    }
 }
 
 /* jobs */
